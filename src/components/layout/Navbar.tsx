@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
             : 'bg-gradient-to-b from-luxury-black/70 via-luxury-black/30 to-transparent text-white py-6'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+        <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-20 flex items-center justify-between">
           
           {/* Logo Mark */}
           <Link to="/" className="flex shrink-0 items-center gap-3 group">
@@ -94,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex min-w-0 flex-1 items-center justify-center space-x-5 xl:space-x-7 pl-8 text-[11px] xl:text-xs tracking-[0.16em] xl:tracking-[0.2em] font-sans uppercase">
+          <nav className="nav-motion hidden lg:flex min-w-0 flex-1 items-center justify-center space-x-5 xl:space-x-7 pl-8 text-[11px] xl:text-xs tracking-[0.16em] xl:tracking-[0.2em] font-sans uppercase">
             <Link
               to="/"
               className={`transition-colors duration-300 hover:text-luxury-bronze ${

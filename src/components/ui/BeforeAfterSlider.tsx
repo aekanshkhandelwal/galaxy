@@ -65,7 +65,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         <img
           src={afterImage}
           alt="After transformation"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          className="absolute inset-0 block w-full h-full object-cover object-center pointer-events-none"
+          style={{ width: '100%', height: '100%' }}
         />
         <div className="absolute top-4 right-4 bg-luxury-black/80 backdrop-blur-md text-luxury-white text-[10px] tracking-widest uppercase px-3 py-1.5 font-semibold">
           {afterLabel}
@@ -79,8 +80,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           <img
             src={beforeImage}
             alt="Before transformation"
-            className="absolute top-0 left-0 h-full max-w-none object-cover"
-            style={{ width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%' }}
+            className="absolute top-0 left-0 block h-full max-w-none object-cover object-center"
+            style={{ width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%', height: '100%' }}
           />
           <div className="absolute top-4 left-4 bg-luxury-white/90 backdrop-blur-md text-luxury-black text-[10px] tracking-widest uppercase px-3 py-1.5 font-semibold border border-luxury-black/10">
             {beforeLabel}

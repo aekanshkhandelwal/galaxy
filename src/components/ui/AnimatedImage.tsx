@@ -26,6 +26,13 @@ export const AnimatedImage: React.FC<AnimatedImageProps> = ({
         src={src}
         alt={alt}
         loading="lazy"
+        onError={(event) => {
+          const image = event.currentTarget;
+          if (!image.dataset.fallback) {
+            image.dataset.fallback = 'true';
+            image.src = `https://picsum.photos/seed/${encodeURIComponent(alt)}/1200/900`;
+          }
+        }}
         className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
       />
       {overlay && (

@@ -12,9 +12,9 @@ export const LuxuryGallerySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         <SectionTitle
-          subtitle="Editorial Design Inspiration"
-          title="Curated Showcase of Interior Craftsmanship"
-          description="Explore completed penthouses, master bedroom sleep sanctuaries, and couture drapery installations designed by Galaxy Living Studio."
+          subtitle="Selected Portfolio"
+          title="Our Work"
+          description="Discover our best completed interiors—from luxury bedrooms and refined living spaces to bespoke drapery and full-home transformations."
         />
 
         {/* Before/After Transformation Slider */}

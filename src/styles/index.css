@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes brand-marquee-left-to-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-marquee {
+  width: max-content;
+  animation: brand-marquee-left-to-right 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@layer components {
+  .nav-motion > a,
+  .nav-motion > div > a {
+    position: relative;
+    transition: transform 220ms ease, color 220ms ease;
+  }
+
+  .nav-motion > a:hover,
+  .nav-motion > div > a:hover {
+    transform: translateY(-2px);
+  }
+
+  .nav-motion > a::after,
+  .nav-motion > div > a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 220ms ease;
+  }
+
+  .nav-motion > a:hover::after,
+  .nav-motion > div > a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
 @layer base {
   html {
     color-scheme: light;

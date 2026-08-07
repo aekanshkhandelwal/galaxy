@@ -5,6 +5,15 @@ import { ArrowUpRight } from 'lucide-react';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import { PRODUCT_CATEGORIES } from '@/data/products';
 
+const CATEGORY_FALLBACK_IMAGES: Record<string, string> = {
+  mattresses: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  'pillows-bedding': 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  curtains: 'https://images.pexels.com/photos/157811/pexels-photo-157811.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  blinds: 'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  wallpapers: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  furniture: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1600',
+};
+
 export const FeaturedCategoriesSection: React.FC = () => {
   return (
     <section className="py-24 px-4 sm:px-8 max-w-7xl mx-auto">
@@ -30,6 +39,13 @@ export const FeaturedCategoriesSection: React.FC = () => {
                 src={category.heroImage}
                 alt={category.name}
                 loading="lazy"
+                onError={(event) => {
+                  const image = event.currentTarget;
+                  if (!image.dataset.fallback) {
+                    image.dataset.fallback = 'true';
+                    image.src = CATEGORY_FALLBACK_IMAGES[category.slug] || 'https://images.pexels.com/photos/161853/living-room-couch-interior-room-161853.jpeg?auto=compress&cs=tinysrgb&w=1600';
+                  }
+                }}
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
