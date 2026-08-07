@@ -1,0 +1,6 @@
+.vercel
+node_modules/
+dist/
+docx_extracted/
+docx_out/
+npm-debug.log*

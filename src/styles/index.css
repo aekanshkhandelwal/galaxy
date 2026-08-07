@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: auto; /* Lenis handles smooth scrolling */
+  }
+
+  body {
+    background-color: #F8F6F2;
+    color: #111111;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Lenis Smooth Scroll Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Typography & Editorial Helpers */
+.editorial-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.editorial-sub {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Glassmorphic Minimal Subdued Accent (not heavy) */
+.subtle-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F6F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A06A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A57C52;
+}
+
+/* Mask Reveal Animation Helper */
+.image-reveal-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-reveal-container img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-reveal-container:hover img {
+  transform: scale(1.05);
+}

@@ -1,0 +1,72 @@
+ERROR:
+Command failed: "C:\Program Files\nodejs\node.exe" "C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js" install --no-audit --no-fund
+
+<--- Last few GCs --->
+
+[21208:000002AA81AD3FF0]     8728 ms: Mark-sweep (reduce) 18.1 (33.1) -> 15.9 (19.4) MB, 12.7 / 0.0 ms  (+ 4.6 ms in 48 steps since start of marking, biggest step 0.2 ms, walltime since start of marking 18 ms) (average mu = 0.998, current mu = 0.998) fina[21208:000002AA81AD3FF0]     9409 ms: Mark-sweep (reduce) 15.9 (19.4) -> 15.9 (19.1) MB, 70.6 / 0.0 ms  (+ 4.8 ms in 42 steps since start of marking, biggest step 0.3 ms, walltime since start of marking 76 ms) (average mu = 0.989, current mu = 0.889) fina
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+ 1: 00007FF78121D7AF 
+ 2: 00007FF7811A0D66 
+ 3: 00007FF7811A2A00 
+ 4: 00007FF781C4D564 
+ 5: 00007FF781C388F2 
+ 6: 00007FF781ABA6AC 
+ 7: 00007FF781AC4B1C 
+ 8: 00007FF781AB7147 
+ 9: 00007FF781ACDB13 
+10: 00007FF781ACE3BD 
+11: 00007FF781AD6CEF 
+12: 00007FF781AED0EC 
+13: 00007FF7818C075F 
+14: 00007FF7818C06DE 
+15: 00007FF7818DC575 
+16: 00007FF7818DD3A4 
+17: 00007FF7818E1EEB 
+18: 00007FF7818EA692 
+19: 00007FF7818BC68E 
+20: 00007FF781911E94 
+21: 00007FF7817C611A 
+22: 00007FF781CEB461 
+23: 00007FF781C968C7 
+24: 00007FF701F9712C 
+
+
+STDOUT:
+
+
+STDERR:
+
+<--- Last few GCs --->
+
+[21208:000002AA81AD3FF0]     8728 ms: Mark-sweep (reduce) 18.1 (33.1) -> 15.9 (19.4) MB, 12.7 / 0.0 ms  (+ 4.6 ms in 48 steps since start of marking, biggest step 0.2 ms, walltime since start of marking 18 ms) (average mu = 0.998, current mu = 0.998) fina[21208:000002AA81AD3FF0]     9409 ms: Mark-sweep (reduce) 15.9 (19.4) -> 15.9 (19.1) MB, 70.6 / 0.0 ms  (+ 4.8 ms in 42 steps since start of marking, biggest step 0.3 ms, walltime since start of marking 76 ms) (average mu = 0.989, current mu = 0.889) fina
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+ 1: 00007FF78121D7AF 
+ 2: 00007FF7811A0D66 
+ 3: 00007FF7811A2A00 
+ 4: 00007FF781C4D564 
+ 5: 00007FF781C388F2 
+ 6: 00007FF781ABA6AC 
+ 7: 00007FF781AC4B1C 
+ 8: 00007FF781AB7147 
+ 9: 00007FF781ACDB13 
+10: 00007FF781ACE3BD 
+11: 00007FF781AD6CEF 
+12: 00007FF781AED0EC 
+13: 00007FF7818C075F 
+14: 00007FF7818C06DE 
+15: 00007FF7818DC575 
+16: 00007FF7818DD3A4 
+17: 00007FF7818E1EEB 
+18: 00007FF7818EA692 
+19: 00007FF7818BC68E 
+20: 00007FF781911E94 
+21: 00007FF7817C611A 
+22: 00007FF781CEB461 
+23: 00007FF781C968C7 
+24: 00007FF701F9712C 
